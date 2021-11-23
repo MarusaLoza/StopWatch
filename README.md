@@ -1,4 +1,4 @@
-[DEMO LINK]()
+[DEMO LINK](https://marusaloza.github.io/timer-project)
 
 Реализовать секундомер, который подсчитывает время в формате «MM: SS»
 
