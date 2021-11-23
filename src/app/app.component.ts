@@ -21,12 +21,14 @@ export class AppComponent implements OnDestroy, OnInit {
         switchMap((isRunning) => isRunning ? timer(0, 1000) : NEVER),
       )
       
-     .subscribe( this.count$$);
+     .subscribe(this.count$$);
     this.count$$.subscribe(val => this.date = new Date(val*1000));
           
   }
 
   ngOnDestroy() {
+    this.isRunning$$.unsubscribe();
+    this.count$$.unsubscribe();
   }
 
   getMin(ms:any) {
